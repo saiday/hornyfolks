@@ -27,7 +27,6 @@
 		58C2C4D1184E229F002DEAAB /* ListObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C4D0184E229F002DEAAB /* ListObject.m */; };
 		58C2C4D3184E5CF3002DEAAB /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58C2C4D2184E5CF3002DEAAB /* Settings.plist */; };
 		8A18D91580EE4E31ABF6D547 /* libPods-hornyfolks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB91D1589D2848498D2A232F /* libPods-hornyfolks.a */; };
-		C363550D1CE94360B0E75BF4 /* libPods-ev8dloveck101.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 514A7CED2F1B4F46B635CF77 /* libPods-ev8dloveck101.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +80,6 @@
 				58C2C489184DC781002DEAAB /* CoreGraphics.framework in Frameworks */,
 				58C2C48B184DC781002DEAAB /* UIKit.framework in Frameworks */,
 				58C2C487184DC781002DEAAB /* Foundation.framework in Frameworks */,
-				C363550D1CE94360B0E75BF4 /* libPods-ev8dloveck101.a in Frameworks */,
 				8A18D91580EE4E31ABF6D547 /* libPods-hornyfolks.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
