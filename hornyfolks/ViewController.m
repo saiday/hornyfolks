@@ -33,8 +33,6 @@
     if (self) {
         AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         self.managedObjectContext = [appdelegate managedObjectContext];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(copyToClip) name:UIPasteboardChangedNotification object:nil];
     }
     
     return self;
@@ -118,7 +116,7 @@
 
 - (void)addRecordTitle:(NSString *)title URL:(NSString *)url
 {
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ListObject" inManagedObjectContext:managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass([ListObject class]) inManagedObjectContext:managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"url == %@", url];
     [request setEntity:entity];
@@ -133,7 +131,7 @@
         object = [requestObject objectAtIndex:0];
         NSLog(@"exist");
     } else {
-        object = (ListObject *)[NSEntityDescription insertNewObjectForEntityForName:@"ListObject" inManagedObjectContext:managedObjectContext];
+        object = (ListObject *)[NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([ListObject class]) inManagedObjectContext:managedObjectContext];
     }
     [object setCreatedAt:[NSDate date]];
     [object setUrl:url];
@@ -144,11 +142,6 @@
         // Errors
         NSLog(@"record cannot be saved: %@", [error localizedDescription]);
     }
-}
-
-- (void)copyToClip
-{
-    NSLog(@"notification");
 }
 
 - (IBAction)generateFromClipboard:(id)sender
