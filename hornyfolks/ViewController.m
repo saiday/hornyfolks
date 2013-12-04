@@ -41,6 +41,7 @@
 - (void)getURLContext:(NSString *) url
 {
     [self.navigationItem setTitle:@"Loading.."];
+    [self.navigationController popToRootViewControllerAnimated:NO];
     
     ConnectionService *sharedService = [ConnectionService sharedService];
     [sharedService parseck101Page: url success:^(NSArray *elements, NSString *title) {
@@ -59,6 +60,8 @@
         browser.zoomPhotosToFill = YES;
         [browser setCurrentPhotoIndex:0];
         [self.navigationItem setTitle:@"ck101 folks"];
+//        [self.navigationController popToViewController:self animated:NO];
+        NSLog(@"%@", self.navigationController.topViewController);
         [self.navigationController pushViewController:browser animated:YES];
     } fail:^{
         [self.navigationItem setTitle:@"ck101 folks"];

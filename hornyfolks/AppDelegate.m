@@ -140,7 +140,7 @@
     [loop invalidate];
     if (self.hasNewContext) {
         UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
-        ViewController *vc = (ViewController *)navController.topViewController;
+        ViewController *vc = (ViewController *)[navController.viewControllers objectAtIndex:0];
         [vc getURLContext:[[UIPasteboard generalPasteboard] string]];
     }
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
