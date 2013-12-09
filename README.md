@@ -11,3 +11,7 @@ Easy start project with:
 - Background observing clipboard
 - Local Notification
 - Photo Gallery with sharing actions
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/saiday/hornyfolks/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
