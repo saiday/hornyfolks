@@ -1,7 +1,7 @@
 hornyfolks - iPhone, iPad universal app
 ==========
 
-![](https://raw.github.com/saiday/hornyfolks/master/docs/hornyfolks.gif)
+![](/docs/hornyfolks.gif)
 
 Inspired by @tzangms
 https://github.com/tzangms/iloveck101
